@@ -5,10 +5,10 @@ In this demo, we customize chaincodes to introduce events in it. After that, we 
 # Installation!
 
   - Setup an private hyperledger network, in this case we use [first-network](https://github.com/hyperledger/fabric-samples/tree/release/first-network) 
-  -- ./byfn.sh -m up # create the network with default chaincode installed
-  -- Modify docker-compose-cli.yaml and mount a volumne for chainCodeExample.go in your container.
-  -- docker exec -it cli bash # enter into the cli console
-  -- run following commands:
+    - ./byfn.sh -m up # create the network with default chaincode installed
+    - Modify docker-compose-cli.yaml and mount a volumne for chainCodeExample.go in your container.
+    - docker exec -it cli bash # enter into the cli console
+    - run following commands:
 ```
 CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 CORE_PEER_ADDRESS=peer0.org1.example.com:7051
