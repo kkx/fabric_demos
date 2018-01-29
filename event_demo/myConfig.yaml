@@ -1,0 +1,23 @@
+crypto:
+  family: ecdsa
+  algorithm: P256-SHA256
+  hash: SHA2-256
+orderers:
+  orderer0:
+    host: orderer.example.com:7050
+    insecure: false
+    tlsPath: ../crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
+peers:
+  peer0:
+    host: peer0.org1.example.com:7051
+    insecure: false
+    tlsPath: ../crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.crt
+  peer1:
+    host: peer1.org1.example.com:8051
+    insecure: false
+    tlsPath: ../crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/server.crt
+eventPeers:
+  peer0:
+    host: peer0.org1.example.com:7053
+    insecure: false
+    tlsPath: ../crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.crt
