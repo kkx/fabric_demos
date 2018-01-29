@@ -19,5 +19,5 @@ peer chaincode instantiate -o orderer.example.com:7050 --tls $CORE_PEER_TLS_ENAB
 ```
 - Install gohfc following the instructions from their github repository.
 - Compile setup.go and run it with myConfig.yaml
-- You should view in the output the event logs trigged by invokes
+- You should receive from the line command output the event logs trigged by invokes
 
