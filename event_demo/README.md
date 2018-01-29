@@ -6,7 +6,7 @@ In this demo, we customize chaincodes to introduce events in it. After that, we 
 
   - Setup an private hyperledger network, in this case we use [first-network](https://github.com/hyperledger/fabric-samples/tree/release/first-network) 
     - ./byfn.sh -m up # create the network with default chaincode installed
-    - Modify docker-compose-cli.yaml and mount a volumne for chainCodeExample.go in your container.
+    - Modify docker-compose-cli.yaml and mount a volume for chainCodeExample.go in your container.
     - Run `docker exec -it cli` bash # enter into the cli console
     - Run following commands to install customized chaincode(with events):
 ```
