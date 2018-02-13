@@ -133,13 +133,13 @@ func main(){
 		fmt.Printf("%s", err)
 	}
     chaincodeSpec := &pb.ChaincodeSpec{Type: pb.ChaincodeSpec_GOLANG, ChaincodeId: &pb.ChaincodeID{Path: os.Args[1], Name: "testcc", Version: "0"}, Input: &pb.ChaincodeInput{Args: [][]byte{[]byte("")}}}
-    packageBytes, err := ioutil.ReadFile(os.Args[1])
-    if err != nil {
-		fmt.Printf("%s", err)
-    }
+    //packageBytes, err := ioutil.ReadFile(os.Args[1])
+    //if err != nil {
+		//fmt.Printf("%s", err)
+    //}
 
     fmt.Printf("%s\n", os.Args[1])
-    fmt.Printf("%s\n", packageBytes)
+    //fmt.Printf("%s\n", packageBytes)
 
     cds, err := defaultCDSFactory(chaincodeSpec )
     if err != nil {
