@@ -1,6 +1,6 @@
-# Get chaincode event using fabric go sdk
+# Execute Lua in chaincode fabric go sdk
 
-In this demo, we customize chaincodes to introduce events in it. After that, we use [fabric go sdk](https://github.com/hyperledger/fabric-sdk-go) to connect to our chaincode and read the events trigged by invokes.
+In this demo, we run lua script in chaincodes. we use [fabric go sdk](https://github.com/hyperledger/fabric-sdk-go) to connect to our chaincode and send lua code as payload and write the lua execution output in the blockchain ledger.
 
 # Installation
 
@@ -18,5 +18,6 @@ peer chaincode install -n mycc1 -v 1.0 -p $PATH_TO_chainCodeExample.go
 peer chaincode instantiate -o orderer.example.com:7050 --tls $CORE_PEER_TLS_ENABLED --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc1 -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}' -P "OR ('Org1MSP.member','Org2MSP.member')"
 ```
 - Install fabric go sdk following the instructions from their github repository.
+- Install [go lua interpreter](https://github.com/yuin/gopher-lua) in your peers where where the chaincode are installed and instantiated
 - Compile setup.go and run it with myConfig.yaml
-- You should receive from the line command output the event logs trigged by invokes
+- You should receive from the lua code output in you console
